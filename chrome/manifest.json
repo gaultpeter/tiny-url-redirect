@@ -1,22 +1,20 @@
 {
-
   "description": "Automatically redirect tiny url without waiting for the timer.",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "TinyURL Redirect",
   "version": "1.0",
   "icons": {
     "48": "icons/border-48.png"
   },
-
   "content_scripts": [
     {
-      "matches": ["*://*.tinyurl.is/*"],
-      "js": ["redirect.js"]
+      "matches": [
+        "*://*.tinyurl.is/*"
+      ],
+      "js": [
+        "redirect.js"
+      ]
     }
   ],
-  "permissions": [
-    "*://127.0.0.1/*",
-    "webRequest",
-    "webRequestBlocking"
-  ]
+  "content_security_policy": {}
 }
