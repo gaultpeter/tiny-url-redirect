@@ -1,21 +1,16 @@
 {
-  "description": "Automatically redirect tiny url without waiting for the timer.",
-  "manifest_version": 3,
-  "name": "TinyURL Redirect",
-  "version": "1.0",
-  "icons": {
-    "48": "icons/border-48.png"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.tinyurl.is/*",
-        "*://reddt.live/*"
-      ],
-      "js": [
-        "redirect.js"
-      ]
-    }
-  ],
-  "content_security_policy": {}
+	"description": "Automatically redirect tiny url without waiting for the timer.",
+	"manifest_version": 3,
+	"name": "TinyURL Redirect",
+	"version": "1.0",
+	"icons": {
+		"48": "icons/border-48.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.tinyurl.*/*"],
+			"js": ["redirect.js"]
+		}
+	],
+	"content_security_policy": {}
 }
