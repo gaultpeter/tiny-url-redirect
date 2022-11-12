@@ -9,7 +9,7 @@
 
 	"content_scripts": [
 		{
-			"matches": ["*://*.tinyurl.*/*"],
+			"matches": ["*://*.tinyurl.*"],
 			"js": ["redirect.js"]
 		}
 	]
